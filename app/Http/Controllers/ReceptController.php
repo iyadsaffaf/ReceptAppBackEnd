@@ -17,4 +17,12 @@ class ReceptController extends Controller
      return response()->json(Recept::get(),200);
 
     }
+    public function save(Request $request){
+        $recept=Recept::create($request->all());
+        return response()->json($recept,200);
+
+
+
+
+    }
 }

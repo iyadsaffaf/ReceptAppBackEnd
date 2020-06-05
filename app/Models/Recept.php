@@ -9,13 +9,17 @@ class Recept extends Model
     //
     //
     protected $table="recept";
+    //public $timestamps=false;
     protected $fillable=[
         'id',
         'created_at',
         'updated_at',
         'description',
         'ingredients',
-        'pteparationtime',
+        'preparation_time',
         'tags',
+        'user_id',
+        'name',
+        'url',
     ];
 }

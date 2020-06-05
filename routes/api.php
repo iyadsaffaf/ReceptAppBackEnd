@@ -26,6 +26,13 @@ Route::group([
     Route::post('me', 'AuthController@me');
     Route::post('signup', 'AuthController@signup');
     Route::get('recept', 'ReceptController@recepts');
+    Route::post('receptsave', 'ReceptController@save');
 
 
-});
+    Route::apiResource('recepsts', 'ReceptController@recepts');
+    Route::get('file', 'FileController@photo');
+    Route::get('file/{name}', 'FileController@photoByName');
+
+
+
+    });

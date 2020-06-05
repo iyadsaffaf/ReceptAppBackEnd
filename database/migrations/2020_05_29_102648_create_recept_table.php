@@ -18,8 +18,13 @@ class CreateReceptTable extends Migration
             $table->timestamps();
             $table->string('description');
             $table->string('ingredients');
-            $table->string('preparationtime');
+            $table->string('preparation_time');
             $table->string('tags');
+            $table->string('user_id');
+            $table->string('name');
+            $table->string('url');
+
+
         });
     }
 
