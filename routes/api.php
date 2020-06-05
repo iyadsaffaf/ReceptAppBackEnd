@@ -27,11 +27,11 @@ Route::group([
     Route::post('signup', 'AuthController@signup');
     Route::get('recept', 'ReceptController@recepts');
     Route::post('receptsave', 'ReceptController@save');
-
-
     Route::apiResource('recepsts', 'ReceptController@recepts');
     Route::get('file', 'FileController@photo');
-    Route::get('file/{name}', 'FileController@photoByName');
+    Route::get('file/', 'FileController@photoByName');
+    Route::post('fileupload', 'FileController@photoSave');
+
 
 
 
