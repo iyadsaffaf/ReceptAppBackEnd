@@ -25,4 +25,19 @@ class ReceptController extends Controller
 
 
     }
+
+    public function update(Request $request,Recept $recept){
+        $recept->update($request->all());
+        return response()->json($recept,200);
+
+
+    }
+
+    public function delete(Request $request,Recept $recept){
+        $recept->delete();
+        return response()->json(null,204);
+
+
+    }
+
 }
