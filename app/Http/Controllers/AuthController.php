@@ -46,6 +46,11 @@ class AuthController extends Controller
     {
         return response()->json(auth()->user());
     }
+    public function userByID($id)
+    {error_log('Some message here.');
+
+        return response()->json(User::find($id));
+    }
 
     /**
      * Log the user out (Invalidate the token).
@@ -88,7 +93,7 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60,
-            'user' => auth()->user()->id
+            'user' => auth()->user()
         ]);
     }
 }

@@ -24,6 +24,8 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
+    Route::get('user/{id}', 'user@userByID');
+
     Route::post('signup', 'AuthController@signup');
     Route::get('recept', 'ReceptController@recepts');
     Route::post('receptsave', 'ReceptController@save');
