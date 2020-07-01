@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recept;
 use Illuminate\Http\Request;
 
 class user extends Controller
@@ -12,4 +13,11 @@ class user extends Controller
 
         return response()->json(\App\User::find($id));
     }
+    public function update(Request $request,\App\User $user){
+        $user->update($request->all());
+        return response()->json($user,200);
+
+
+    }
+
 }
