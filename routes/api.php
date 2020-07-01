@@ -27,6 +27,11 @@ Route::group([
     Route::get('user/{id}', 'user@userByID');
     Route::put('user/{user}', 'user@update');
 
+    Route::post('favourite', 'fovouriteController@save');
+    Route::delete('favourite/{favourite}', 'fovouriteController@delete');
+    Route::get('favourite', 'fovouriteController@getAll');
+
+
     Route::post('signup', 'AuthController@signup');
     Route::get('recept', 'ReceptController@recepts');
     Route::post('receptsave', 'ReceptController@save');
